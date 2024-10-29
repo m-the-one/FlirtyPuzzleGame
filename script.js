@@ -1,75 +1,79 @@
+const driveIdeas = [
+    "Which position you’ll love?",
+    "I want to clap without hands.",
+    "Get ready for my 6-inch monster.",
+    "Taste my lips on your neck.",
+    "I'm going to make you melt in my arms.",
+    "How about some steamy role-play?",
+    "Let's try a new experience together.",
+    "Body massage with scented oils."
+];
+const dumplingIdeas = [
+    "Eating together",
+    "Making hair of each other",
+    "Cooking together",
+    "Watching the sunset",
+    "Stargazing",
+    "Building a fort with blankets and pillows",
+    "Writing love letters to each other",
+    "Having a picnic in the park"
+];
+
+let driveIndex = 0;
+let dumplingIndex = 0;
+
 function showSections() {
     document.getElementById('home-screen').style.display = 'none';
     document.getElementById('sections').style.display = 'block';
 }
 
-function showCareer() {
-    document.getElementById('career-section').style.display = 'block';
-    document.getElementById('drive-section').style.display = 'none';
-    document.getElementById('dumplings-section').style.display = 'none';
+function showSection(section) {
+    document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+    document.getElementById(`${section}-section`).style.display = 'block';
+
+    if (section === 'drive') showIdea('drive');
+    if (section === 'dumplings') showIdea('dumplings');
 }
 
-function showDrive() {
-    document.getElementById('drive-section').style.display = 'block';
-    document.getElementById('career-section').style.display = 'none';
-    document.getElementById('dumplings-section').style.display = 'none';
+function showIdea(section) {
+    if (section === 'drive') {
+        document.getElementById('idea-display').innerText = driveIdeas[driveIndex];
+    } else if (section === 'dumplings') {
+        document.getElementById('dumpling-display').innerText = dumplingIdeas[dumplingIndex];
+    }
 }
 
-function showDumplings() {
-    document.getElementById('dumplings-section').style.display = 'block';
-    document.getElementById('career-section').style.display = 'none';
-    document.getElementById('drive-section').style.display = 'none';
+function nextIdea(section) {
+    if (section === 'drive') {
+        driveIndex = (driveIndex + 1) % driveIdeas.length;
+        showIdea('drive');
+    } else if (section === 'dumplings') {
+        dumplingIndex = (dumplingIndex + 1) % dumplingIdeas.length;
+        showIdea('dumplings');
+    }
 }
 
 function addGoal() {
     const goalText = document.getElementById('goal-text').value;
     if (goalText) {
         const goalDiv = document.createElement('div');
-        goalDiv.innerHTML = `<span>${goalText}</span> 
-            <button onclick="markComplete(this)">✓</button> 
-            <button onclick="markIncomplete(this)">✗</button>`;
-        document.getElementById('weekly-goals').appendChild(goalDiv);
+        goalDiv.innerHTML = `<span>${goalText}</span>`;
+        document.getElementById('goal-list').appendChild(goalDiv);
         document.getElementById('goal-text').value = '';
     }
 }
 
-function markComplete(button) {
-    button.parentElement.innerHTML = `<span style="text-decoration: line-through;">${button.previousSibling.textContent}</span> - Great job!`;
-}
+function addFeedback(section) {
+    const feedbackText = section === 'drive' 
+        ? document.getElementById('drive-feedback').value 
+        : document.getElementById('dumpling-feedback').value;
 
-function markIncomplete(button) {
-    const reason = prompt("Why didn't you complete this goal?");
-    if (reason) {
-        button.parentElement.innerHTML = `<span style="color: red;">${button.previousSibling.textContent}</span> - Reason: ${reason}`;
-    }
-}
-
-function addDriveIdea() {
-    const driveText = document.getElementById('drive-text').value;
-    if (driveText) {
-        const driveDiv = document.createElement('div');
-        driveDiv.innerHTML = `<span>${driveText}</span>`;
-        document.getElementById('drive-list').appendChild(driveDiv);
-        document.getElementById('drive-text').value = '';
-    }
-}
-
-function addDumpling() {
-    const dumplingText = document.getElementById('dumpling-text').value;
-    if (dumplingText) {
-        const dumplingDiv = document.createElement('div');
-        dumplingDiv.innerHTML = `<span>${dumplingText}</span>`;
-        document.getElementById('dumpling-list').appendChild(dumplingDiv);
-        document.getElementById('dumpling-text').value = '';
-    }
-}
-
-function addThought() {
-    const thoughtText = document.getElementById('thought-text').value;
-    if (thoughtText) {
-        const thoughtDiv = document.createElement('div');
-        thoughtDiv.innerHTML = `<span>${thoughtText}</span>`;
-        document.getElementById('thought-list').appendChild(thoughtDiv);
-        document.getElementById('thought-text').value = '';
+    if (feedbackText) {
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.innerHTML = `<span>${feedbackText}</span>`;
+        document.getElementById(`feedback-list-${section}`).appendChild(feedbackDiv);
+        
+        if (section === 'drive') document.getElementById('drive-feedback').value = '';
+        if (section === 'dumplings') document.getElementById('dumpling-feedback').value = '';
     }
 }
