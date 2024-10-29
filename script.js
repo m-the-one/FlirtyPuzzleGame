@@ -1,74 +1,75 @@
-// Show Sections After Clicking Photo
 function showSections() {
-    document.getElementById("home-screen").style.display = "none";
-    document.getElementById("sections").style.display = "block";
+    document.getElementById('home-screen').style.display = 'none';
+    document.getElementById('sections').style.display = 'block';
 }
 
-// Show Career Section
 function showCareer() {
-    hideAllSections();
-    document.getElementById("career-section").style.display = "block";
+    document.getElementById('career-section').style.display = 'block';
+    document.getElementById('drive-section').style.display = 'none';
+    document.getElementById('dumplings-section').style.display = 'none';
 }
 
-// Show Drive Section
 function showDrive() {
-    hideAllSections();
-    document.getElementById("drive-section").style.display = "block";
+    document.getElementById('drive-section').style.display = 'block';
+    document.getElementById('career-section').style.display = 'none';
+    document.getElementById('dumplings-section').style.display = 'none';
 }
 
-// Show Dumplings Section
 function showDumplings() {
-    hideAllSections();
-    document.getElementById("dumplings-section").style.display = "block";
+    document.getElementById('dumplings-section').style.display = 'block';
+    document.getElementById('career-section').style.display = 'none';
+    document.getElementById('drive-section').style.display = 'none';
 }
 
-// Hide All Sections
-function hideAllSections() {
-    document.getElementById("career-section").style.display = "none";
-    document.getElementById("drive-section").style.display = "none";
-    document.getElementById("dumplings-section").style.display = "none";
-}
-
-// Add Goal to Career Section
 function addGoal() {
-    const goalText = document.getElementById("goal-text").value;
+    const goalText = document.getElementById('goal-text').value;
     if (goalText) {
-        const goalItem = document.createElement("div");
-        goalItem.textContent = goalText;
-        document.getElementById("weekly-goals").appendChild(goalItem);
-        document.getElementById("goal-text").value = "";
+        const goalDiv = document.createElement('div');
+        goalDiv.innerHTML = `<span>${goalText}</span> 
+            <button onclick="markComplete(this)">✓</button> 
+            <button onclick="markIncomplete(this)">✗</button>`;
+        document.getElementById('weekly-goals').appendChild(goalDiv);
+        document.getElementById('goal-text').value = '';
     }
 }
 
-// Add Idea to Drive Section
+function markComplete(button) {
+    button.parentElement.innerHTML = `<span style="text-decoration: line-through;">${button.previousSibling.textContent}</span> - Great job!`;
+}
+
+function markIncomplete(button) {
+    const reason = prompt("Why didn't you complete this goal?");
+    if (reason) {
+        button.parentElement.innerHTML = `<span style="color: red;">${button.previousSibling.textContent}</span> - Reason: ${reason}`;
+    }
+}
+
 function addDriveIdea() {
-    const ideaText = document.getElementById("drive-text").value;
-    if (ideaText) {
-        const ideaItem = document.createElement("div");
-        ideaItem.textContent = ideaText;
-        document.getElementById("drive-list").appendChild(ideaItem);
-        document.getElementById("drive-text").value = "";
+    const driveText = document.getElementById('drive-text').value;
+    if (driveText) {
+        const driveDiv = document.createElement('div');
+        driveDiv.innerHTML = `<span>${driveText}</span>`;
+        document.getElementById('drive-list').appendChild(driveDiv);
+        document.getElementById('drive-text').value = '';
     }
 }
 
-// Add Thought to Drive Section
-function addThought() {
-    const thoughtText = document.getElementById("thought-text").value;
-    if (thoughtText) {
-        const thoughtItem = document.createElement("div");
-        thoughtItem.textContent = thoughtText;
-        document.getElementById("thought-list").appendChild(thoughtItem);
-        document.getElementById("thought-text").value = "";
-    }
-}
-
-// Add Activity to Dumplings Section
 function addDumpling() {
-    const dumplingText = document.getElementById("dumpling-text").value;
+    const dumplingText = document.getElementById('dumpling-text').value;
     if (dumplingText) {
-        const dumplingItem = document.createElement("div");
-        dumplingItem.textContent = dumplingText;
-        document.getElementById("dumpling-list").appendChild(dumplingItem);
-        document.getElementById("dumpling-text").value = "";
+        const dumplingDiv = document.createElement('div');
+        dumplingDiv.innerHTML = `<span>${dumplingText}</span>`;
+        document.getElementById('dumpling-list').appendChild(dumplingDiv);
+        document.getElementById('dumpling-text').value = '';
+    }
+}
+
+function addThought() {
+    const thoughtText = document.getElementById('thought-text').value;
+    if (thoughtText) {
+        const thoughtDiv = document.createElement('div');
+        thoughtDiv.innerHTML = `<span>${thoughtText}</span>`;
+        document.getElementById('thought-list').appendChild(thoughtDiv);
+        document.getElementById('thought-text').value = '';
     }
 }
