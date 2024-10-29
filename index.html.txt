@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flirty Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-screen">
+        <h2>Enter Your Secret Code</h2>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Enter</button>
+        <p id="error-message"></p>
+    </div>
+
+    <!-- Game Section -->
+    <div id="game-screen" style="display: none;">
+        <h2>Welcome to the Flirty Puzzle Game!</h2>
+        <div id="puzzle-container"></div>
+        <p id="message"></p>
+        <button onclick="nextPuzzle()">Next Puzzle</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
