@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Shared Space</title>
+    <title>Our Special Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Home Screen with Photo -->
     <div id="home-screen">
         <img src="couple-photo.jpg" alt="Us" id="couple-photo" onclick="showSections()">
-        <h2>Click our photo to enter</h2>
+        <h1>Welcome to Our Special Game!</h1>
     </div>
 
-    <!-- Navigation Sections -->
     <div id="sections" style="display: none;">
         <button onclick="showCareer()">Career</button>
         <button onclick="showDrive()">Drive</button>
@@ -23,150 +21,138 @@
     <!-- Career Section -->
     <div id="career-section" style="display: none;">
         <h2>Career Goals</h2>
-        <div id="goal-input">
-            <input type="text" id="goal-text" placeholder="Add a new goal...">
-            <button onclick="addGoal()">Add Goal</button>
-        </div>
-        <h3>Weekly Goals</h3>
+        <input type="text" id="goal-text" placeholder="Add your goal here...">
+        <button onclick="addGoal()">Add Goal</button>
+        <h3>Your Goals:</h3>
         <div id="weekly-goals"></div>
-        <h3>Monthly Goals</h3>
-        <div id="monthly-goals"></div>
-        <h3>Yearly Goals</h3>
-        <div id="yearly-goals"></div>
     </div>
 
     <!-- Drive Section -->
     <div id="drive-section" style="display: none;">
-        <h2>Drive (Our Private Moments)</h2>
-        <p>Add things you’d like to do together!</p>
-        <div id="drive-input">
-            <input type="text" id="drive-text" placeholder="Add an idea...">
-            <button onclick="addDriveIdea()">Add</button>
-        </div>
+        <h2>Drive Ideas</h2>
+        <input type="text" id="drive-text" placeholder="Add your idea here...">
+        <button onclick="addDriveIdea()">Add Idea</button>
+        <h3>Your Ideas:</h3>
         <div id="drive-list"></div>
-        
-        <h3>Intimate Ideas</h3>
-        <ul id="intimate-ideas">
+        <h3>Suggested Ideas:</h3>
+        <ul id="suggested-drive-ideas">
             <li>Which position you’ll love?</li>
             <li>I want to clap without hands.</li>
             <li>Get ready for my 6-inch monster.</li>
             <li>Taste my dick with your lips.</li>
             <li>I’m going to smack your beautiful pussy.</li>
-            <li>You won’t be able to walk after I'm done with you.</li>
-            <li>Let’s try some sensual massage together.</li>
-            <li>I want to feel your body against mine.</li>
+            <li>You won’t be able to walk.</li>
             <li>Let’s have a steamy shower together.</li>
-            <li>I want to hear you moan my name.</li>
-            <li>Let’s explore each other’s bodies.</li>
-            <li>I can’t wait to kiss you all over.</li>
-            <li>Let’s play a naughty game together.</li>
-            <li>I want to taste you all night long.</li>
-            <li>Let’s have a spontaneous make-out session.</li>
-            <li>I want to take my time undressing you.</li>
-            <li>Let’s role-play our wildest fantasies.</li>
-            <li>I want to hold you tight while we cuddle.</li>
-            <li>Let’s get lost in each other’s eyes.</li>
-            <li>I want to whisper sweet nothings in your ear.</li>
-            <li>Let’s dance closely to our favorite song.</li>
-            <li>I want to explore every inch of you.</li>
-            <li>Let’s have a night of passion and romance.</li>
-            <li>I can’t wait to feel your hands on me.</li>
-            <li>Let’s make love under the stars.</li>
-            <li>I want to tease you until you beg for it.</li>
-            <li>Let’s experiment with new positions.</li>
-            <li>I want to feel your warm breath on my skin.</li>
-            <li>Let’s play with ice and heat for some fun.</li>
-            <li>I want to surprise you with a romantic setup.</li>
-            <li>Let’s write each other sexy notes.</li>
-            <li>I want to hear all your desires and fantasies.</li>
-            <li>Let’s take a bubble bath together.</li>
-            <li>I want to feel you close to me while we sleep.</li>
-            <li>Let’s try a new location for some fun.</li>
-            <li>I want to create a playlist of our favorite sexy songs.</li>
-            <li>Let’s have a picnic with some naughty treats.</li>
-            <li>I want to kiss you softly and passionately.</li>
-            <li>Let’s have a pillow fight that leads to cuddling.</li>
-            <li>I want to explore your wild side.</li>
-            <li>Let’s create a sexy photo album together.</li>
-            <li>I want to feel your heartbeat next to mine.</li>
-            <li>Let’s enjoy a candlelight dinner followed by romance.</li>
-            <li>I want to hold your hand and feel connected.</li>
-            <li>Let’s make a list of our favorite fantasies.</li>
-            <li>I want to tease you until you can’t take it anymore.</li>
-            <li>Let’s indulge in some whipped cream and strawberries.</li>
-            <li>I want to feel you whisper sweet things to me.</li>
-            <li>Let’s have a sensual game of truth or dare.</li>
-            <li>I want to surprise you with a romantic getaway.</li>
-            <li>Let’s plan a day of adventure and intimacy.</li>
-            <li>I want to write you a love letter full of desires.</li>
-            <li>Let’s take turns giving each other massages.</li>
-            <li>I want to feel your lips on mine all night.</li>
-            <li>Let’s create a bucket list of intimate things to do.</li>
-            <li>I want to kiss you until we forget the world.</li>
-            <li>Let’s share our wildest dreams and fantasies.</li>
-            <li>I want to explore every fantasy together.</li>
-            <li>Let’s plan a sexy date night at home.</li>
-            <li>I want to cuddle with you while watching a movie.</li>
-            <li>Let’s make a pact to try something new together.</li>
-            <li>I want to take you on a romantic surprise trip.</li>
-            <li>Let’s enjoy some chocolate-covered treats together.</li>
-            <li>I want to taste every inch of you.</li>
-            <li>Let’s dance in the living room like no one’s watching.</li>
-            <li>I want to explore each other’s fantasies in detail.</li>
+            <li>Whisper sweet nothings in each other’s ears.</li>
+            <li>Role play as different characters.</li>
+            <li>Try out new positions from the Kama Sutra.</li>
+            <li>Make out under the stars.</li>
+            <li>Do a body shot off each other.</li>
+            <li>Play with ice cubes on each other’s bodies.</li>
+            <li>Do some sexy dancing for each other.</li>
+            <li>Talk dirty to each other.</li>
+            <li>Have a picnic in bed.</li>
+            <li>Try some new flavored lubes together.</li>
+            <li>Play a game of truth or dare.</li>
+            <li>Give each other sensual massages.</li>
+            <li>Have a sexy photo shoot.</li>
+            <li>Tease each other all night long.</li>
+            <li>Try out some fun bedroom props.</li>
+            <li>Play a sexy card game.</li>
+            <li>Have a midnight snack together in bed.</li>
+            <li>Make a sexy playlist to dance to.</li>
+            <li>Write a naughty letter to each other.</li>
+            <li>Recreate your first date with a twist.</li>
+            <li>Try to recreate a favorite scene from a romantic movie.</li>
+            <li>Spend a night without any clothes on.</li>
+            <li>Watch each other’s favorite steamy scenes from movies.</li>
+            <li>Explore each other’s bodies with blindfolds on.</li>
+            <li>Give each other a lap dance.</li>
+            <li>Act out a scene from your favorite book together.</li>
+            <li>Send each other flirty texts throughout the day.</li>
+            <li>Try using feathers or silk for some light BDSM play.</li>
+            <li>Have a sensual bubble bath together.</li>
+            <li>Take turns picking out each other’s outfits.</li>
+            <li>Take a sexy selfie and send it to each other.</li>
+            <li>Have a tickle fight and see where it leads.</li>
+            <li>Do a sexy scavenger hunt around the house.</li>
+            <li>Make up a sexy story together.</li>
+            <li>Try a new type of kiss (e.g., French, butterfly, etc.).</li>
+            <li>Spend a whole day being flirty and sexy with each other.</li>
+            <li>Read a steamy novel together.</li>
+            <li>Cook dinner together with some sexy ingredients.</li>
+            <li>Play a game of seduction.</li>
+            <li>Spend a day being each other’s personal assistant.</li>
+            <li>Take a sexy road trip together.</li>
+            <li>Leave each other flirty notes around the house.</li>
+            <li>Spend the night telling each other your wildest fantasies.</li>
+            <li>Go to a sex shop together and pick out something new to try.</li>
         </ul>
-        <h3>What do you want to do with me?</h3>
-        <div id="your-thoughts">
-            <input type="text" id="thought-text" placeholder="Share your thoughts...">
-            <button onclick="addThought()">Submit Thought</button>
-        </div>
+        <input type="text" id="thought-text" placeholder="Your thoughts...">
+        <button onclick="addThought()">Share Your Thoughts</button>
+        <h3>Your Thoughts:</h3>
         <div id="thought-list"></div>
     </div>
 
     <!-- Dumplings Section -->
     <div id="dumplings-section" style="display: none;">
-        <h2>Dumplings (Cute Things to Do)</h2>
-        <p>Here are some cute things we can do together:</p>
-        <ul id="cute-activities">
-            <li>Eating together</li>
-            <li>Making hair for each other</li>
-            <li>Cooking together</li>
-            <li>Stargazing on a clear night</li>
-            <li>Going for long walks</li>
-            <li>Having a picnic in the park</li>
-            <li>Watching the sunset together</li>
-            <li>Building a fort with blankets</li>
-            <li>Playing board games or card games</li>
-            <li>Doing a puzzle together</li>
-            <li>Having a movie marathon with our favorite films</li>
-            <li>Making a scrapbook of our memories</li>
-            <li>Going to the zoo or aquarium</li>
-            <li>Trying out new recipes</li>
-            <li>Writing a story together</li>
-            <li>Learning a dance together</li>
-            <li>Having a themed dinner night</li>
-            <li>Going to a local festival or fair</li>
-            <li>Creating art together</li>
-            <li>Having a karaoke night</li>
-            <li>Going on a scenic drive</li>
-            <li>Making a time capsule</li>
-            <li>Visiting a farmer's market</li>
-            <li>Reading books to each other</li>
-            <li>Making handmade gifts for each other</li>
-            <li>Going ice skating or roller skating</li>
-            <li>Having a spa day at home</li>
-            <li>Creating a bucket list together</li>
-            <li>Volunteering for a cause we care about</li>
-            <li>Trying out a new hobby together</li>
-            <li>Exploring a nearby town</li>
-            <li>Going for a bike ride</li>
-            <li>Visiting an escape room</li>
-            <!-- Add more cute activities as needed -->
-        </ul>
-        <div id="dumplings-input">
-            <input type="text" id="dumpling-text" placeholder="Add an activity...">
-            <button onclick="addDumpling()">Add</button>
-        </div>
+        <h2>Cute Things to Do</h2>
+        <input type="text" id="dumpling-text" placeholder="Add your cute activity...">
+        <button onclick="addDumpling()">Add Activity</button>
+        <h3>Your Activities:</h3>
         <div id="dumpling-list"></div>
+        <h3>Suggested Activities:</h3>
+        <ul id="suggested-dumpling-ideas">
+            <li>Eating together</li>
+            <li>Making hair of each other</li>
+            <li>Cooking together</li>
+            <li>Watching the sunset</li>
+            <li>Stargazing</li>
+            <li>Going for a walk in the park</li>
+            <li>Building a fort with blankets and pillows</li>
+            <li>Writing love letters to each other</li>
+            <li>Playing board games</li>
+            <li>Doing a puzzle together</li>
+            <li>Going for a hike</li>
+            <li>Having a movie marathon</li>
+            <li>Trying a new café or restaurant</li>
+            <li>Going to an amusement park</li>
+            <li>Drawing or painting together</li>
+            <li>Making a scrapbook of your favorite memories</li>
+            <li>Playing video games together</li>
+            <li>Doing yoga or working out together</li>
+            <li>Visiting a museum or art gallery</li>
+            <li>Taking a dance class together</li>
+            <li>Volunteering for a local charity</li>
+            <li>Making a list of things you want to do together</li>
+            <li>Learning a new skill or hobby together</li>
+            <li>Having a picnic in the backyard or a local park</li>
+            <li>Reading books together</li>
+            <li>Exploring your city and discovering new places</li>
+            <li>Trying out a new recipe together</li>
+            <li>Planning your next vacation together</li>
+            <li>Listening to music and sharing your favorite songs</li>
+            <li>Having a themed dinner night at home</li>
+            <li>Creating a vision board together</li>
+            <li>Playing cards</li>
+            <li>Doing a DIY project together</li>
+            <li>Going bowling</li>
+            <li>Having a spa day at home</li>
+            <li>Creating a bucket list of things you want to do together</li>
+            <li>Having a photoshoot together</li>
+            <li>Going on a scenic drive</li>
+            <li>Taking a day trip to a nearby town</li>
+            <li>Planting flowers or starting a garden together</li>
+            <li>Going to a concert or live event</li>
+            <li>Exploring nature and going on adventures</li>
+            <li>Having a talent show night at home</li>
+            <li>Doing karaoke together</li>
+            <li>Building something together, like furniture or crafts</li>
+            <li>Creating a couple’s playlist</li>
+            <li>Surprising each other with small gifts</li>
+            <li>Making homemade pizza together</li>
+            <li>Doing an indoor scavenger hunt</li>
+        </ul>
     </div>
 
     <script src="script.js"></script>
