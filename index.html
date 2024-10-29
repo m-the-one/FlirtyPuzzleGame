@@ -8,151 +8,43 @@
 </head>
 <body>
     <div id="home-screen">
-        <img src="couple-photo.jpg" alt="Us" id="couple-photo" onclick="showSections()">
+        <img src="couple-photo.jpg" alt="Our Photo" id="couple-photo" onclick="showSections()">
         <h1>Welcome to Our Special Game!</h1>
+        <p>Click on our photo to start</p>
     </div>
 
     <div id="sections" style="display: none;">
-        <button onclick="showCareer()">Career</button>
-        <button onclick="showDrive()">Drive</button>
-        <button onclick="showDumplings()">Dumplings</button>
+        <button onclick="showSection('career')">Career</button>
+        <button onclick="showSection('drive')">Drive</button>
+        <button onclick="showSection('dumplings')">Dumplings</button>
     </div>
 
     <!-- Career Section -->
-    <div id="career-section" style="display: none;">
+    <div id="career-section" class="section" style="display: none;">
         <h2>Career Goals</h2>
         <input type="text" id="goal-text" placeholder="Add your goal here...">
         <button onclick="addGoal()">Add Goal</button>
-        <h3>Your Goals:</h3>
-        <div id="weekly-goals"></div>
+        <div id="goal-list"></div>
     </div>
 
     <!-- Drive Section -->
-    <div id="drive-section" style="display: none;">
+    <div id="drive-section" class="section" style="display: none;">
         <h2>Drive Ideas</h2>
-        <input type="text" id="drive-text" placeholder="Add your idea here...">
-        <button onclick="addDriveIdea()">Add Idea</button>
-        <h3>Your Ideas:</h3>
-        <div id="drive-list"></div>
-        <h3>Suggested Ideas:</h3>
-        <ul id="suggested-drive-ideas">
-            <li>Which position you’ll love?</li>
-            <li>I want to clap without hands.</li>
-            <li>Get ready for my 6-inch monster.</li>
-            <li>Taste my dick with your lips.</li>
-            <li>I’m going to smack your beautiful pussy.</li>
-            <li>You won’t be able to walk.</li>
-            <li>Let’s have a steamy shower together.</li>
-            <li>Whisper sweet nothings in each other’s ears.</li>
-            <li>Role play as different characters.</li>
-            <li>Try out new positions from the Kama Sutra.</li>
-            <li>Make out under the stars.</li>
-            <li>Do a body shot off each other.</li>
-            <li>Play with ice cubes on each other’s bodies.</li>
-            <li>Do some sexy dancing for each other.</li>
-            <li>Talk dirty to each other.</li>
-            <li>Have a picnic in bed.</li>
-            <li>Try some new flavored lubes together.</li>
-            <li>Play a game of truth or dare.</li>
-            <li>Give each other sensual massages.</li>
-            <li>Have a sexy photo shoot.</li>
-            <li>Tease each other all night long.</li>
-            <li>Try out some fun bedroom props.</li>
-            <li>Play a sexy card game.</li>
-            <li>Have a midnight snack together in bed.</li>
-            <li>Make a sexy playlist to dance to.</li>
-            <li>Write a naughty letter to each other.</li>
-            <li>Recreate your first date with a twist.</li>
-            <li>Try to recreate a favorite scene from a romantic movie.</li>
-            <li>Spend a night without any clothes on.</li>
-            <li>Watch each other’s favorite steamy scenes from movies.</li>
-            <li>Explore each other’s bodies with blindfolds on.</li>
-            <li>Give each other a lap dance.</li>
-            <li>Act out a scene from your favorite book together.</li>
-            <li>Send each other flirty texts throughout the day.</li>
-            <li>Try using feathers or silk for some light BDSM play.</li>
-            <li>Have a sensual bubble bath together.</li>
-            <li>Take turns picking out each other’s outfits.</li>
-            <li>Take a sexy selfie and send it to each other.</li>
-            <li>Have a tickle fight and see where it leads.</li>
-            <li>Do a sexy scavenger hunt around the house.</li>
-            <li>Make up a sexy story together.</li>
-            <li>Try a new type of kiss (e.g., French, butterfly, etc.).</li>
-            <li>Spend a whole day being flirty and sexy with each other.</li>
-            <li>Read a steamy novel together.</li>
-            <li>Cook dinner together with some sexy ingredients.</li>
-            <li>Play a game of seduction.</li>
-            <li>Spend a day being each other’s personal assistant.</li>
-            <li>Take a sexy road trip together.</li>
-            <li>Leave each other flirty notes around the house.</li>
-            <li>Spend the night telling each other your wildest fantasies.</li>
-            <li>Go to a sex shop together and pick out something new to try.</li>
-        </ul>
-        <input type="text" id="thought-text" placeholder="Your thoughts...">
-        <button onclick="addThought()">Share Your Thoughts</button>
-        <h3>Your Thoughts:</h3>
-        <div id="thought-list"></div>
+        <div id="idea-display"></div>
+        <button onclick="nextIdea('drive')">Next</button>
+        <input type="text" id="drive-feedback" placeholder="Your thoughts...">
+        <button onclick="addFeedback('drive')">Submit Feedback</button>
+        <div id="feedback-list-drive"></div>
     </div>
 
     <!-- Dumplings Section -->
-    <div id="dumplings-section" style="display: none;">
+    <div id="dumplings-section" class="section" style="display: none;">
         <h2>Cute Things to Do</h2>
-        <input type="text" id="dumpling-text" placeholder="Add your cute activity...">
-        <button onclick="addDumpling()">Add Activity</button>
-        <h3>Your Activities:</h3>
-        <div id="dumpling-list"></div>
-        <h3>Suggested Activities:</h3>
-        <ul id="suggested-dumpling-ideas">
-            <li>Eating together</li>
-            <li>Making hair of each other</li>
-            <li>Cooking together</li>
-            <li>Watching the sunset</li>
-            <li>Stargazing</li>
-            <li>Going for a walk in the park</li>
-            <li>Building a fort with blankets and pillows</li>
-            <li>Writing love letters to each other</li>
-            <li>Playing board games</li>
-            <li>Doing a puzzle together</li>
-            <li>Going for a hike</li>
-            <li>Having a movie marathon</li>
-            <li>Trying a new café or restaurant</li>
-            <li>Going to an amusement park</li>
-            <li>Drawing or painting together</li>
-            <li>Making a scrapbook of your favorite memories</li>
-            <li>Playing video games together</li>
-            <li>Doing yoga or working out together</li>
-            <li>Visiting a museum or art gallery</li>
-            <li>Taking a dance class together</li>
-            <li>Volunteering for a local charity</li>
-            <li>Making a list of things you want to do together</li>
-            <li>Learning a new skill or hobby together</li>
-            <li>Having a picnic in the backyard or a local park</li>
-            <li>Reading books together</li>
-            <li>Exploring your city and discovering new places</li>
-            <li>Trying out a new recipe together</li>
-            <li>Planning your next vacation together</li>
-            <li>Listening to music and sharing your favorite songs</li>
-            <li>Having a themed dinner night at home</li>
-            <li>Creating a vision board together</li>
-            <li>Playing cards</li>
-            <li>Doing a DIY project together</li>
-            <li>Going bowling</li>
-            <li>Having a spa day at home</li>
-            <li>Creating a bucket list of things you want to do together</li>
-            <li>Having a photoshoot together</li>
-            <li>Going on a scenic drive</li>
-            <li>Taking a day trip to a nearby town</li>
-            <li>Planting flowers or starting a garden together</li>
-            <li>Going to a concert or live event</li>
-            <li>Exploring nature and going on adventures</li>
-            <li>Having a talent show night at home</li>
-            <li>Doing karaoke together</li>
-            <li>Building something together, like furniture or crafts</li>
-            <li>Creating a couple’s playlist</li>
-            <li>Surprising each other with small gifts</li>
-            <li>Making homemade pizza together</li>
-            <li>Doing an indoor scavenger hunt</li>
-        </ul>
+        <div id="dumpling-display"></div>
+        <button onclick="nextIdea('dumplings')">Next</button>
+        <input type="text" id="dumpling-feedback" placeholder="Your thoughts...">
+        <button onclick="addFeedback('dumplings')">Submit Feedback</button>
+        <div id="feedback-list-dumplings"></div>
     </div>
 
     <script src="script.js"></script>
